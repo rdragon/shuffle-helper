@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: medium;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#play
+{
+  width: 100%;
+  height: 100%;
+}
+
+button
+{
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: #e7e7e7;
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+button.clicked
+{
+  background-color: rgb(223, 255, 223);
+  cursor: default;
+}
+
+h1
+{
+  text-align: center;
+}
+
+br,
+hr
+{
+  clear: both;
+}
+
+body
+{
+  padding: 0.4em;
+  display: none;
+}
+
+div,
+body.visible
+{
+  display: block;
+}
+
+.sheet
+{
+  line-height: 1.8em;
+  padding: 0.2em;
+}
+
+@media only screen and (min-width: 20em)
+{
+  .sheet
+  {
+    width: 20em;
+    border: 0.1em solid #666;
+    margin: 0 auto;
+  }
+}
+
+.sheet > *
+{
+  margin: 0.2em;
+}
+
+.sheet > span,
+.sheet > input[type=checkbox],
+.sheet > input[type=radio],
+.sheet > label
+{
+  float: left;
+}
+
+.sheet > input[type=number],
+.sheet > input[type=text],
+.sheet > button,
+.sheet > select
+{
+  float: right;
+}
+
+.sheet > div
+{
+  margin: 0;
+  padding: 0.2em;
+  overflow: hidden;
+  min-width: 3em;
+}
+
+.sheet > div > input[type=text],
+.sheet > div > input[type=number],
+.sheet > span > button
+{
+  width: 100%;
+}
+
+.sheet > span.next,
+.sheet > span.prev
+{
+  margin: 0;
+  padding: 0.2em;
+}
+
+.sheet input,
+.sheet button,
+.sheet select
+{
+  height: 1.8em;
+}
+
+.sheet input[type=text],
+.sheet input[type=number]
+{
+  padding-left: 0.1em;
+  width: 4em;
+  border: 1px solid #999;
+}
+
+.sheet input[type=text]:disabled,
+.sheet input[type=number]:disabled,
+.sheet input[type=number].inactive
+{
+  color: #aaa;
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+
+.sheet button
+{
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.sheet > span.next
+{
+  min-width: 60%;
+}
+
+.sheet > span.prev
+{
+  min-width: 40%;
+}
+
+.sheet input[type=text].error,
+.sheet input[type=number].error
+{
+  color: red;
+}
+
+.sheet.start > div > button
+{
+  min-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.sheet label.disabled
+{
+  color: #aaa;
+}
+
+.sheet.settings.one > button.stage,
+.sheet.settings.one > span.stage,
+.sheet.settings.one > br.stage
+{
+  display: none;
+}
+
+#play span.next
+{
+  float: left;
+  width: 100%;
+  height: 75%;
+}
+
+#play span.prev
+{
+  float: left;
+  width: 100%;
+  height: 25%;
+  padding-top: 0.4em;
+}
+
+#play button
+{
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (orientation: landscape)
+{
+  #play span.next
+  {
+    width: 75%;
+    height: 100%;
+  }
+  #play span.prev
+  {
+    width: 25%;
+    height: 100%;
+    padding-top: 0;
+    padding-left: 0.4em;
+  }
+}
+
+body.start > div.sheet.start,
+body.shuffle > div.sheet.shuffle,
+body.partition > div.sheet.partition,
+body.settings > div.sheet.settings,
+body.play > #play
+{
+  display: none;
+}
+
+.small
+{
+  font-size: small;
+  line-height: normal;
+}
+
+a
+{
+  color: black;
+}
+
+a:hover
+{
+  color: rgb(91, 93, 120)
+}
+
+.hidden
+{
+  display: none;
+}
+
+.invisible
+{
+  visibility: hidden;
+}
+
+.ml-3
+{
+  margin-left: 0.5rem;
+}

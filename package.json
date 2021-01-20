@@ -1,0 +1,31 @@
+{
+  "name": "shuffle-helper",
+  "version": "1.0.0",
+  "description": "A web application that helps you shuffle a deck of cards of any size. The provided shuffle method is not very fast, but the resulting deck will be shuffled thoroughly.",
+  "main": "index.html",
+  "dependencies": {
+    "coffeescript": "^2.5.1"
+  },
+  "devDependencies": {
+    "coffeelint": "^2.1.0",
+    "markdown-folder-to-html": "^2.4.0",
+    "static-server": "^2.2.1"
+  },
+  "scripts": {
+    "postinstall": "coffee --compile --output js src && markdown-folder-to-html",
+    "build": "coffee --compile --output js src",
+    "watch": "coffee --compile --watch --output js src",
+    "start": "static-server -p 9080",
+    "docs": "markdown-folder-to-html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdragon/shuffle-helper.git"
+  },
+  "author": "Rik Steenkamp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdragon/shuffle-helper/issues"
+  },
+  "homepage": "https://github.com/rdragon/shuffle-helper#readme"
+}
